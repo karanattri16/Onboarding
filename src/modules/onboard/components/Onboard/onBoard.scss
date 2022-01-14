@@ -1,0 +1,16 @@
+@import 'app/assets/styles/variables.scss';
+
+.form-container {
+  padding-top: 85px;
+  padding-bottom: 155px;
+  .title-container {
+    margin-bottom: 60px;
+  }
+  .message-container,
+  .completion-icon-container {
+    margin-top: 74px;
+  }
+  .onboard-form-button {
+    min-width: 290px;
+  }
+}

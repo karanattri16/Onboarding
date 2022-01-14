@@ -1,0 +1,26 @@
+.workspace-url-input {
+  input {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: 0;
+  }
+  .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl {
+    border-left: none !important;
+    border-radius: 0px !important;
+  }
+}
+
+.url-prefix {
+  padding: 10px;
+  background-color: #f3f4f8;
+  font-size: 12px;
+  border: 1px solid #d4d4d4;
+  height: 40px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-radius: 1px solid #d3d3d3;
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

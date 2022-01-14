@@ -17,21 +17,29 @@ const messageObj = {
     message: `We'll streamline your setup experience accordingly.`,
   },
   [STEP_FOUR]: {
-    title: 'Congratulations, Eren!',
+    title: 'Congratulations, {name}!',
     message: `You have completed onboarding, you can start using the Eden!`,
   },
 };
 
 function Message(props) {
-  const {currentStep} = props;
-
+  const {currentStep, values} = props;
+  const getTitle = () => {
+    let title = messageObj[currentStep].title;
+    if (currentStep === 4) {
+      title = title.replace(`{name}`, values.user_info.full_name);
+    }
+    return title;
+  };
   return (
     <>
-      <Grid item xs={12}>
-        <h2 className="text-center">{messageObj[currentStep].title}</h2>
+      <Grid item xs={12} className="title-message-container">
+        <h2 className="text-center text-primary-dark">{getTitle()}</h2>
       </Grid>
-      <Grid item xs={12}>
-        <p className="text-center text-navy font-sm">{messageObj[currentStep].message}</p>
+      <Grid item xs={12} className="message-info">
+        <p className="text-center text-primary-blue font-sm message">
+          {messageObj[currentStep].message}
+        </p>
       </Grid>
     </>
   );

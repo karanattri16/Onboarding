@@ -7,10 +7,11 @@ import 'app/assets/styles/common.scss';
 function AppShell() {
   return (
     <div className="app">
-      App shell
-      <Paper>
-        <ModuleShell />
-      </Paper>
+      <div className="main-container">
+        <Paper>
+          <ModuleShell />
+        </Paper>
+      </div>
     </div>
   );
 }

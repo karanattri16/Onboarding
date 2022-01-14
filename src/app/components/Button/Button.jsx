@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.scss';
 
 function Button(props) {
   const {children, ...rest} = props;

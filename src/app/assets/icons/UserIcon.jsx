@@ -1,18 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function UserIcon() {
+function UserIcon(props) {
+  const {fill} = props;
   return (
-    <svg
-      version="1.0"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="20"
-      viewBox="0 0 64.000000 64.000000"
-      preserveAspectRatio="xMidYMid meet"
-    >
+    <svg width="24" height="20" viewBox="0 0 64.000000 64.000000">
       <g
         transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
-        fill="#000000"
+        fill={fill}
         stroke="none"
       >
         <path
@@ -27,5 +22,13 @@ function UserIcon() {
     </svg>
   );
 }
+
+UserIcon.propTypes = {
+  fill: PropTypes.string,
+};
+
+UserIcon.defaultProps = {
+  fill: '#00000',
+};
 
 export default UserIcon;

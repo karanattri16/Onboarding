@@ -1,5 +1,11 @@
 @import 'app/assets/styles/variables.scss';
 .step-container {
+  .step-wrapper {
+    transition: 300ms ease-in-out;
+    @media (max-width: 367px) {
+      width: 19% !important;
+    }
+  }
   .step {
     display: inline-block;
     position: relative;
@@ -24,14 +30,28 @@
     }
   }
   .step-marker {
-    width: 25px;
+    width: 27px;
     height: 0;
     border: 1px solid #d4d4d4;
     margin: 3px 0px;
     display: inline-block;
+
     &.colored {
-      border-color: $primary-purple;
+      -webkit-animation: 'example' 3s ease infinite;
     }
     transition: 300ms ease-in-out;
+    @media (max-width: 369px) {
+      width: 10px !important;
+    }
+
+    @keyframes example {
+      0% {
+        border-color: $primary-purple;
+      }
+
+      100% {
+        border-color: $primary-purple;
+      }
+    }
   }
 }

@@ -9,11 +9,11 @@ function Steps(props) {
   return (
     <Grid container alignItems="center" justifyContent="center" className="step-container">
       {stepList.map((step, index) => (
-        <div key={step.label}>
+        <Grid item key={step.label} className="step-wrapper">
           <div
-            className={`step step-${index + 1} ${step.className} ${(step.completed ||
-              index + 1 === currentStep) &&
-              'colored'}`}
+            className={`step text-primary-dark  step-${index + 1} ${
+              step.className
+            } ${(step.completed || index + 1 === currentStep) && 'colored'}`}
             key={step.label.concat(index)}
           >
             <div className="step-label">{step.label}</div>
@@ -32,7 +32,7 @@ function Steps(props) {
           ) : (
             <></>
           )}
-        </div>
+        </Grid>
       ))}
     </Grid>
   );

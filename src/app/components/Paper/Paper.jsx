@@ -5,7 +5,7 @@ import './paper.scss';
 function Paper(props) {
   const {children, ...rest} = props;
   return (
-    <div {...rest} className={`${rest.className} paper`}>
+    <div {...rest} className="paper">
       {children}
     </div>
   );

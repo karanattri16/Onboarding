@@ -4,14 +4,18 @@
   border: 0.5px solid $light-blue;
   border-radius: 5px;
   max-width: 140px;
-  padding: 15px 20px;
+  padding: 15px;
+  min-height: 140px;
   height: 140px;
+  cursor: pointer;
+
   &.left {
-    margin-right: 12px;
+    margin-right: 10px;
   }
   &.right {
-    margin-left: 12px;
+    margin-left: 10px;
   }
+
   p {
     text-align: left;
     margin-bottom: 10px;
@@ -21,5 +25,36 @@
   }
   &.selected {
     border-color: $primary-purple;
+    svg {
+      fill: $primary-purple;
+    }
+  }
+  &:hover {
+    background-color: #efedfc;
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    &.left {
+      margin: 10px 5px;
+    }
+    &.right {
+      margin: 10px 5px;
+    }
+  }
+  @media only screen and (min-device-width: 280px) and (max-device-width: 320px) {
+    &.left {
+      margin: 10px 5px;
+    }
+    &.right {
+      margin: 10px 5px;
+    }
+  }
+  @media only screen and (min-device-width: 200px) and (max-device-width: 280px) {
+    &.left {
+      margin: 10px 0px;
+    }
+    &.right {
+      margin: 10px 0px;
+    }
   }
 }
