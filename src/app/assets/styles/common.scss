@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.m-10 {
+  margin: 10px !important;
+}
+.p-10 {
+  padding: 10px;
+}
+
+label.text-field-label {
+  margin-bottom: 10px !important;
+}
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.my-10 {
+  margin: 10px 0px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+.font-md {
+  font-size: 14px;
+}
+.font-bold {
+  font-weight: 600;
+}
+
+.color-grey {
+  color: $secondary-grey;
+}

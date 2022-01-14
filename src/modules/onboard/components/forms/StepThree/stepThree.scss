@@ -1,0 +1,25 @@
+@import 'app/assets/styles/variables.scss';
+.tile-container {
+  background-color: $white;
+  border: 0.5px solid $light-blue;
+  border-radius: 5px;
+  max-width: 140px;
+  padding: 15px 20px;
+  height: 140px;
+  &.left {
+    margin-right: 12px;
+  }
+  &.right {
+    margin-left: 12px;
+  }
+  p {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .icon {
+    display: flex;
+  }
+  &.selected {
+    border-color: $primary-purple;
+  }
+}
