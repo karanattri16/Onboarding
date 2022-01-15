@@ -27,7 +27,7 @@ function Message(props) {
   const getTitle = () => {
     let title = messageObj[currentStep].title;
     if (currentStep === 4) {
-      title = title.replace(`{name}`, values.user_info.full_name);
+      title = title.replace(`{name}`, values.user_info.display_name);
     }
     return title;
   };
