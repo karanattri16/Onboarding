@@ -137,7 +137,7 @@ export default class OnBoard extends Component {
             onSubmit={this.handleStepChange}
           >
             {({values, errors, touched, setFieldValue, isValid}) => (
-              <Form>
+              <Form autocomplete="off">
                 <Grid container justifyContent="center">
                   {this.state.currentStep === 1 ? (
                     <StepOne errors={errors} touched={touched} values={values} />
