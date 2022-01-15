@@ -27,14 +27,16 @@
 
   .path {
     height: 2px;
-    width: 27px;
+    min-width: 18px;
+    width: 60px;
     position: relative;
     background: $light-blue;
     display: inline-block;
     bottom: 3px !important;
 
     .progress-track {
-      width: 27px;
+      width: 60px;
+      min-width: 18px;
     }
   }
   .path span {
@@ -84,14 +86,20 @@
     }
   }
 
-  @media only screen and (min-device-width: 280px) and (max-device-width: 320px) {
-    .step-wrapper {
-      width: 25% !important;
-    }
+  @media only screen and (min-device-width: 200px) and (max-device-width: 280px) {
     .path {
-      width: 12px;
+      width: 12px !important;
       .progress-track {
-        width: 12px;
+        width: 12px !important;
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 280px) and (max-device-width: 420px) {
+    .path {
+      width: auto;
+      .progress-track {
+        width: auto;
       }
     }
   }

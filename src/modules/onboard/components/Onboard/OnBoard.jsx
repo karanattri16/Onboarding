@@ -1,4 +1,4 @@
-import {Grid} from '@material-ui/core';
+import {Grid, Grow, Slide} from '@material-ui/core';
 import ProcessCompleteIcon from 'app/assets/icons/ProcessCompleteIcon';
 import Button from 'app/components/Button';
 import {Form, Formik} from 'formik';
@@ -112,15 +112,17 @@ export default class OnBoard extends Component {
           <Steps stepList={this.state.stepList} currentStep={this.state.currentStep} />
         </Grid>
         {this.state.currentStep === 4 ? (
-          <Grid
-            item
-            xs={12}
-            justifyContent="center"
-            container
-            className="completion-icon-container"
-          >
-            <ProcessCompleteIcon />
-          </Grid>
+          <Grow timeout={500} in={this.state.currentStep === 4}>
+            <Grid
+              item
+              xs={12}
+              justifyContent="center"
+              container
+              className="completion-icon-container"
+            >
+              <ProcessCompleteIcon />
+            </Grid>
+          </Grow>
         ) : (
           <></>
         )}

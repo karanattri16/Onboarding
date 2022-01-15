@@ -7,7 +7,7 @@ function Steps(props) {
   const {stepList = [], currentStep} = props;
 
   return (
-    <Grid container alignItems="center" justifyContent="center" className="step-container">
+    <Grid container alignItems="center" justifyContent="center" className="step-container" item>
       {stepList.map((step, index) => (
         <Grid item key={step.label} className="step-wrapper">
           <div
@@ -20,7 +20,7 @@ function Steps(props) {
           </div>
           {index !== stepList.length - 1 ? (
             <>
-              <div class="path">
+              <div className="path">
                 <span className="progress-track">
                   <span
                     className={` ${step.completed ? 'completed' : ''} ${

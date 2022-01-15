@@ -1,6 +1,6 @@
 import 'app/assets/styles/common.scss';
 import Paper from 'app/components/Paper';
-import ModuleShell from '../../modules/OnBoard/shell/OnBoardingShell';
+import ModuleShell from 'modules/OnBoard/shell/OnBoardingShell';
 import React from 'react';
 import './appShell.scss';
 
