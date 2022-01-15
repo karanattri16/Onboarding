@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid} from '@material-ui/core';
 import Routes from './Routes';
 
-function ModuleShell() {
+function OnBoardingShell() {
   return (
     <Grid container justifyContent="center">
       <Routes />
@@ -10,4 +10,4 @@ function ModuleShell() {
   );
 }
 
-export default ModuleShell;
+export default OnBoardingShell;
