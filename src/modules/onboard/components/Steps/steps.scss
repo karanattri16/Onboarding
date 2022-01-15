@@ -1,11 +1,5 @@
 @import 'app/assets/styles/variables.scss';
 .step-container {
-  .step-wrapper {
-    transition: 300ms ease-in-out;
-    @media (max-width: 367px) {
-      width: 19% !important;
-    }
-  }
   .step {
     display: inline-block;
     position: relative;
@@ -23,34 +17,81 @@
       justify-content: center;
       align-items: center;
     }
+    transition: 1s ease-in;
     &.colored {
       background-color: $primary-purple;
       color: $white;
       border-color: $primary-purple;
     }
   }
-  .step-marker {
+
+  .path {
+    height: 2px;
     width: 27px;
-    height: 0;
-    border: 1px solid #d4d4d4;
-    margin: 3px 0px;
+    position: relative;
+    background: $light-blue;
     display: inline-block;
+    bottom: 3px !important;
 
-    &.colored {
-      -webkit-animation: 'example' 3s ease infinite;
+    .progress-track {
+      width: 27px;
     }
-    transition: 300ms ease-in-out;
-    @media (max-width: 369px) {
-      width: 10px !important;
+  }
+  .path span {
+    display: block;
+    height: 100%;
+  }
+
+  .completed {
+    background-color: $primary-purple;
+    -webkit-animation: progressBar 400ms ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+  }
+  .started {
+    width: 14px;
+    background-color: $primary-purple;
+    -webkit-animation: started 1s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  @keyframes started {
+    0% {
+      width: 0%;
     }
+    80% {
+      width: 0%;
+    }
+    100% {
+      width: 50%;
+    }
+  }
 
-    @keyframes example {
-      0% {
-        border-color: $primary-purple;
-      }
+  @keyframes progressBar {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
 
-      100% {
-        border-color: $primary-purple;
+  @keyframes progressBar {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-device-width: 280px) and (max-device-width: 320px) {
+    .step-wrapper {
+      width: 25% !important;
+    }
+    .path {
+      width: 12px;
+      .progress-track {
+        width: 12px;
       }
     }
   }

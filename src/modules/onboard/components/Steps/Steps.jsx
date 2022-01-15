@@ -20,14 +20,26 @@ function Steps(props) {
           </div>
           {index !== stepList.length - 1 ? (
             <>
-              <div
-                className={`step-marker ${(step.completed || index + 1 === currentStep) &&
-                  'colored'}`}
-              ></div>
-              <div
-                className={`step-marker ${(step.completed || index + 2 === currentStep) &&
-                  'colored'}`}
-              ></div>
+              <div class="path">
+                <span className="progress-track">
+                  <span
+                    className={` ${step.completed ? 'completed' : ''} ${
+                      index + 1 === currentStep ? 'started' : ''
+                    }`}
+                  ></span>
+                </span>
+              </div>
+
+              <>
+                {/* <div
+                  className={`step-marker ${(step.completed || index + 1 === currentStep) &&
+                    'colored'}`}
+                ></div>
+                <div
+                  className={`step-marker ${(step.completed || index + 2 === currentStep) &&
+                    'colored'}`}
+                ></div> */}
+              </>
             </>
           ) : (
             <></>

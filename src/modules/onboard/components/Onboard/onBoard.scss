@@ -13,4 +13,10 @@
   .onboard-form-button {
     min-width: 290px;
   }
+  @media only screen and (min-device-width: 200px) and (max-device-width: 420px) {
+    .onboard-form-button {
+      min-width: 100px;
+      width: 180px;
+    }
+  }
 }
