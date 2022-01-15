@@ -8,7 +8,7 @@ function StepTwo(props) {
   const {errors, touched, values} = props;
 
   return (
-    <div>
+    <Grid item xs={12}>
       <Grid item xs={12}>
         <span className="text-field-label">Workspace Name</span>
         <TextBox
@@ -43,7 +43,7 @@ function StepTwo(props) {
           </Grid>
         </Grid>
       </Grid>
-    </div>
+    </Grid>
   );
 }
 
